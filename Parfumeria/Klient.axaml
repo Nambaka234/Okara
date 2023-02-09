@@ -1,0 +1,125 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Parfumeria.Klient"
+        Title="Klient"
+		Icon="/products/logo.png">
+	<Grid RowDefinitions="Auto,*,Auto">
+		<Grid ColumnDefinitions="*,*,*">
+			<TextBox
+				Grid.Column="0"
+				HorizontalAlignment="Stretch"
+				VerticalContentAlignment="Stretch"
+				Margin="10"
+				Name="SearchTextBox"
+				Watermark="Поиск товаров"
+				FontFamily="Comic Sans MS"/>
+
+			<ComboBox
+				Margin="10"
+				SelectedIndex="0"
+				Grid.Column="1"
+				HorizontalAlignment="Stretch"
+				Name="SortComboBox"
+				FontFamily="Comic Sans MS">
+
+				<ComboBoxItem Content="по возрастанию"/>
+				<ComboBoxItem Content="по убыванию"/>
+			</ComboBox>
+
+			<ComboBox
+				Margin="10"
+				SelectedIndex="0"
+				Grid.Column="2"
+				HorizontalAlignment="Stretch"
+				Name="FilterComboBox"
+				FontFamily="Comic Sans MS">
+
+				<ComboBoxItem Content="Все диапазоны"/>
+				<ComboBoxItem Content="от 0 до 10%"/>
+				<ComboBoxItem Content="от 10% до 15%"/>
+				<ComboBoxItem Content="от 15% до 20%"/>
+				<ComboBoxItem Content="от 20% до 25%"/>
+				<ComboBoxItem Content="от 25% до 30%"/>
+
+			</ComboBox>
+
+		</Grid>
+
+		<ListBox
+			Grid.Row="1"
+			Margin="40"
+			DockPanel.Dock="Top"
+			Name="TovarListBox"
+			ScrollViewer.VerticalScrollBarVisibility="Auto"
+			Height="350">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Border BorderThickness="2"
+							BorderBrush="Black"
+							Background="{Binding Color}">
+						<DockPanel>
+							<StackPanel Orientation="Horizontal">
+								<StackPanel DockPanel.Dock="Left">
+									<Image
+										Width="64"
+										Height="64"
+										Margin="10"
+								
+										Source="{Binding Mainimage}"/>
+								</StackPanel>
+
+
+
+								<StackPanel Orientation="Vertical" DockPanel.Dock="Bottom" Width="700" Margin="30,0,0,0">
+
+
+									<TextBlock Text="{Binding Title}" FontFamily="Comic Sans MS"/>
+
+									<TextBlock Text="{Binding Description}" FontFamily="Comic Sans MS"/>
+									<TextBlock Text="{Binding Manufacturer}" FontFamily="Comic Sans MS"/>
+									<TextBlock Text="{Binding Cost}" FontFamily="Comic Sans MS"/>
+
+
+
+									
+
+
+
+
+								</StackPanel>
+
+								<StackPanel DockPanel.Dock="Right" Margin="400,30,0,0" HorizontalAlignment="Right">
+									<TextBlock
+									TextAlignment="Right"
+									Text="{Binding Discountamount}" FontFamily="Comic Sans MS"/>
+								</StackPanel>
+							</StackPanel>
+
+						</DockPanel>
+					</Border>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+
+		<Button
+			Grid.Column="1"
+			Grid.Row="2"
+			Margin="10"
+			Name="AddZakazButton"
+			HorizontalAlignment="Center"
+			DockPanel.Dock="Bottom"
+			Content="Сформировать заказ"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="0,0,40,115"
+			Name="BackButton"
+			HorizontalAlignment="Right"
+			DockPanel.Dock="Bottom"
+			Content="Назад"/>
+	</Grid>
+</Window>

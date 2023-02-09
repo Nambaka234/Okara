@@ -1,0 +1,99 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Parfumeria.MenegerZakaz"
+        Title="MenegerZakaz"
+		Icon="/products/logo.png">
+	<Grid RowDefinitions="Auto,*,Auto">
+		<Grid ColumnDefinitions="*,*,*">
+			<TextBox
+				Grid.Column="0"
+				Name="SearchTextBox"
+				Margin="10"
+				HorizontalAlignment="Stretch"
+				VerticalContentAlignment="Stretch"
+				Watermark="Поиск заказов"/>
+
+			<ComboBox
+				Grid.Column="1"
+				SelectedIndex="0"
+				Margin="10"
+				HorizontalAlignment="Stretch"
+				Name="SortComboBox">
+
+				<ComboBoxItem Content="по возрастанию"/>
+				<ComboBoxItem Content="по убыванию"/>
+
+			</ComboBox>
+
+			<ComboBox
+				Grid.Column="2"
+				SelectedIndex="0"
+				Margin="10"
+				HorizontalAlignment="Stretch"
+				Name="FilterComboBox">
+
+				<ComboBoxItem Content="Все типы"/>
+				<ComboBoxItem Content="Новый"/>
+				<ComboBoxItem Content="Завершен"/>
+
+			</ComboBox>
+		</Grid>
+
+		<ListBox
+			Grid.Row="1"
+			Margin="40"
+			Name="ZakazListBox"
+			DockPanel.Dock="Top"
+			ScrollViewer.VerticalScrollBarVisibility="Auto"
+			Height="350">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<Border BorderThickness="2"
+							BorderBrush="Black"
+							Background="{Binding Color}">
+						<DockPanel>
+							<StackPanel Orientation="Horizontal">
+								<StackPanel Orientation="Vertical" DockPanel.Dock="Bottom" Width="700" Margin="30,0,0,0">
+									<TextBlock Text="{Binding Status}"/>
+									<TextBlock Text="{Binding Deliverydate}"/>
+									<TextBlock Text="{Binding Pickuppoint}"/>
+								</StackPanel>
+
+								<StackPanel Orientation="Horizontal">
+									<Button
+										Tag="{Binding Orderid}"
+										Content="редактировать"
+										Click="RedactZakazButton_Click"/>
+
+									
+								</StackPanel>
+
+							</StackPanel>
+						</DockPanel>
+					</Border>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+
+		<Button
+			Grid.Column="1"
+			Grid.Row="2"
+			Margin="10"
+			Name="AddZakazButton"
+			HorizontalAlignment="Center"
+			DockPanel.Dock="Bottom"
+			Content="Сформировать заказ"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="0,0,40,115"
+			Name="BackButton"
+			HorizontalAlignment="Right"
+			DockPanel.Dock="Bottom"
+			Content="Назад"/>
+	</Grid>
+</Window>

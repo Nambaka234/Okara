@@ -1,0 +1,48 @@
+is_global = true
+build_property.AvaloniaNameGeneratorBehavior = InitializeComponent
+build_property.AvaloniaNameGeneratorDefaultFieldModifier = internal
+build_property.AvaloniaNameGeneratorFilterByPath = *
+build_property.AvaloniaNameGeneratorFilterByNamespace = *
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Parfumeria
+build_property.ProjectDir = C:\Users\Иван\Desktop\Parfumeria\Parfumeria\
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/AddingTovar.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/AddingZakaz.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/Admin.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/AdminTovar.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/AdminZakaz.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/App.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/Auterling.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/Klient.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/Meneger.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/Иван/Desktop/Parfumeria/Parfumeria/MenegerZakaz.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

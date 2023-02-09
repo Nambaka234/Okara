@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Parfumeria.Admin"
+        Title="Admin">
+	<Grid RowDefinitions="Auto,*,Auto">
+		<Button 
+			Grid.Row="1"
+			HorizontalAlignment="Center"
+			Name="ZakazButton"
+			Content="Заказы"
+			Margin="10"/>
+
+		<Button
+			Grid.Row="1"
+			HorizontalAlignment="Center"
+			Name="TovarButton"
+			Content="Товары"
+			Margin="0,80,0,0"/>
+	</Grid>
+</Window>

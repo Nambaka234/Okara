@@ -1,0 +1,82 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="Parfumeria.AddingTovar"
+        Title="AddingTovar"
+		Icon="/products/logo.png">
+	<Grid
+			Margin="10"
+			ColumnDefinitions="*,*"
+			RowDefinitions="*,Auto">
+
+		<TextBox Grid.Column="1"
+				 Name="description"
+				 Text="{Binding Path=Productdescription}"
+				 Margin="10,0,10,10"
+				 Watermark="Описание"/>
+
+		<StackPanel Spacing="10">
+			<TextBox
+				Name="articulenamuber"
+				Watermark="Актикулярный номер"
+				Text="{Binding Path=Productarticlenumber}"/>
+
+			<TextBox
+				Name="name"
+				Watermark="Имя продукта"
+				Text="{Binding Path=Productname}"/>
+
+			<TextBox
+				Name="category"
+				Watermark="Категория продукта"
+				Text="{Binding Path=Productcategory}"/>
+
+			<TextBox
+				Name="photo"
+				Watermark="Фото продукта"
+				Text="{Binding Path=Productphoto}"/>
+
+			<Button Name="SelectFileButton" Content="Выбрать файл"/>
+
+			<TextBox
+				Name="manufacturer"
+				Watermark="Производитель"
+				Text="{Binding Path=Productmanufacturer}"/>
+
+			<TextBox
+				Name="cost"
+				Watermark="Цена продукта"
+				Text="{Binding Path=Productcost}"/>
+
+			<TextBox
+				Name="discountamount"
+				Watermark="Скидка"
+				Text="{Binding Path=Productdiscountamount}"/>
+
+			<TextBox
+				Name="quantityinstock"
+				Watermark="Количество на складе"
+				Text="{Binding Path=Productquantityinstock}"/>
+
+
+
+		</StackPanel>
+
+		<Button Grid.Row="1"
+				Name="SaveButton"
+				Content="Сохранить"
+				Grid.ColumnSpan="2"
+				HorizontalAlignment="Center"/>
+
+		<Button
+			Grid.Row="2"
+			Grid.Column="1"
+			Margin="0,0,40,115"
+			Name="BackButton"
+			HorizontalAlignment="Right"
+			DockPanel.Dock="Bottom"
+			Content="Назад"/>
+	</Grid>
+</Window>
